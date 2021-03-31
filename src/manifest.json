@@ -1,0 +1,25 @@
+{
+  "name": "Github1s overlay",
+  "description": "Load github1s.com in a overlay layout!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "author": "Dimas López Zurita (dimaslz) | me@dimaslz.io",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs",
+    "webRequest",
+    "declarativeNetRequest"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "css": [],
+      "js": ["script.js"]
+    }
+  ]
+}

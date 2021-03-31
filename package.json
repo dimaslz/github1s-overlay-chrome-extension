@@ -1,0 +1,16 @@
+{
+  "name": "github1s-overlay-chrome-extension",
+  "description": "Allow open https://github1s.com viewer into a overlay iframe into Github",
+  "author": "Dimas López Zurita (dimaslz) | me@dimaslz.io",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.2"
+  },
+  "dependencies": {},
+  "scripts": {
+    "prebuild": "rm -rf dist .parcel-cache && mkdir dist",
+    "watch": "NODE_ENV=development && cp src/manifest.json dist/ && parcel watch --no-hmr src/{background.js,script.js}",
+    "build": "cp src/manifest.json dist/ && parcel build src/{background.js,script.js}"
+  }
+}
